@@ -4,19 +4,29 @@ import TodoForm from "./components/TodoForm";
 
 const todos = [
   {
-    task: 'Organize Garage',
+    task: "Organize the Garage",
     id: 1,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    task: "Bake Cookies",
     id: 2,
+    completed: false
+  },
+  {
+    task: "Wash the Dishes",
+    id: 3,
+    completed: false
+  },
+  {
+    task: "Mow the Lawn",
+    id: 4,
     completed: false
   }
 ];
 
 class App extends React.Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       todos
@@ -40,10 +50,10 @@ class App extends React.Component {
 
   addNewTodo = todoName => {
     console.log(todoName);
-    this.state({
+    this.setState({
       todos: [
         ...this.state.todos,
-        { task: todoName, id: Date.now(), completed: false }
+        { task: todoName, completed: false, id: Date.now() }
       ]
     });
   };
@@ -55,15 +65,14 @@ class App extends React.Component {
       })
     });
   };
- 
+
   render() {
-    return(
+    return (
       <div className="App">
-        <div>
-          <h2>Welcome to your Todo App!</h2>
+        <div className="header">
+          <h2>Todo List</h2>
           <TodoForm addNewTodo={this.addNewTodo} />
-       </div>
-      
+        </div>
         <TodoList
           toggleTodo={this.toggleTodo}
           todos={this.state.todos}
