@@ -14,6 +14,7 @@ export const Add = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 12px;
     margin-bottom: 16px;
 `
 
@@ -21,6 +22,7 @@ export const Name = styled.h2 `
     font-size: 60px;
     font-weight: bold;
     color: #cc0000;
+    margin: 0 0;
 `
 
 export const AddButton = styled.button `
