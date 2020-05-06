@@ -4,25 +4,25 @@ import TodoForm from "./components/TodoForm";
 
 const todos = [
   {
-    task: "Organize the Garage",
-    id: 1,
-    completed: false
-  },
-  {
-    task: "Bake Cookies",
-    id: 2,
-    completed: false
-  },
-  {
-    task: "Wash the Dishes",
-    id: 3,
-    completed: false
-  },
-  {
-    task: "Mow the Lawn",
-    id: 4,
+    task: "",
+    id: "",
     completed: false
   }
+//   {
+//     task: "Bake Cookies",
+//     id: 2,
+//     completed: false
+//   },
+//   {
+//     task: "Wash the Dishes",
+//     id: 3,
+//     completed: false
+//   },
+//   {
+//     task: "Mow the Lawn",
+//     id: 4,
+//     completed: false
+//   }
 ];
 
 class App extends React.Component {
