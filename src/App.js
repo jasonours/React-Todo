@@ -1,6 +1,8 @@
 import React from "react";
 import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
+import { Body, Name } from "./components/Styles";
+import "./styles.css";
 
 const todos = [
   {
@@ -8,6 +10,11 @@ const todos = [
     id: "",
     completed: false
   }
+  // {
+  //   task: "Organize the Garage",
+  //   id: "1",
+  //   completed: false
+  // },
 //   {
 //     task: "Bake Cookies",
 //     id: 2,
@@ -68,9 +75,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <Body className="App">
         <div className="header">
-          <h2>Todo List</h2>
+          <Name>Task List</Name>
           <TodoForm addNewTodo={this.addNewTodo} />
         </div>
         <TodoList
@@ -78,7 +85,7 @@ class App extends React.Component {
           todos={this.state.todos}
           clearCompleted={this.clearCompleted}
         />
-      </div>
+      </Body>
     );
   }
 }
